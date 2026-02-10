@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "PhishGuard AI",
+  "version": "1.0",
+  "description": "Real-time phishing detection using ML",
+  "permissions": ["tabs", "activeTab"],
+  "host_permissions": [
+    "http://localhost:8000/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
+
+
