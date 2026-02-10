@@ -32,3 +32,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// javascript is responsible for fetching the current active tab's URL and sending it to a local server for analysis. Based on the response, it updates the popup's status display with the appropriate color and message. If the page is unsupported or if there's an error during the fetch, it displays a corresponding message.

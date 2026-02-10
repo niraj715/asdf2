@@ -12,4 +12,5 @@
   }
 }
 
+// this is manifest file for the PhishGuard AI browser extension. It specifies the extension's name, version, description, permissions, and the default popup HTML file. The extension has permissions to access tabs and activeTab, as well as host permissions to communicate with a local server at http://localhost:8000/* for phishing detection analysis.
 
