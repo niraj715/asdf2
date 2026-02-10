@@ -17,9 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(res => res.json())
     .then(data => {
       const colors = {
-        GREEN: "green",
-        YELLOW: "orange",
-        RED: "red"
+        GREEN: "✅ Safe: You can proceed",
+        YELLOW: "⚠️ Suspicious: Proceed with caution",
+        RED: "⚠️ Warning: Do safe. Don't proceed"
       };
 
       document.getElementById("status").innerHTML =
