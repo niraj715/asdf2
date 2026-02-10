@@ -2,10 +2,112 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <style>
+body {
+      width: 260px;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f4f6f8;
+    }
+
+    .container {
+      padding: 16px;
+      animation: fadeIn 0.4s ease-in;
+      color:#666
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+.status {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .confidence {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 12px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      animation: pulse 1.5s infinite;
+    }
+
+    .green {
+      background: #e6f7ed;
+      color: #1e7f43;
+    }
+    .yellow {
+      background: #fff4e5;
+      color: #b36b00;
+    }
+
+    .red {
+      background: #fdecea;
+      color: #b00020;
+    }
+
+    .loading {
+      font-size: 14px;
+      color: #555;
+      animation: blink 1.2s infinite;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes blink {
+      0% { opacity: 0.3; }
+      50% { opacity: 1; }
+      100% { opacity: 0.3; }
+    }
+@keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    footer {
+      text-align: center;
+      font-size: 11px;
+      color: #888;
+      margin-top: 10px;
+    }
+  </style>
 </head>
-<body style="width:220px;text-align:center;font-family:sans-serif;">
-  <h3>PhishGaurd AI</h3>
-  <div id="status">Scanning...</div>
+<body>
+  <div class="container">
+    <h2>PhishGuard AI</h2>
+
+    <div class="card">
+      <div id="status" class="loading">Scanning website…</div>
+      <div id="confidence" class="confidence"></div>
+    </div>
+
+    <footer>
+      Local ML · Privacy-First
+    </footer>
+  </div>
+
 
   <script src="popup.js"></script>
 </body>
